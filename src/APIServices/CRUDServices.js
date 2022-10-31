@@ -1,7 +1,8 @@
 import axios from "axios";
+const BaseURL="https://crud-backend.adaptable.app/api/v1"
 
 export function Create(ProductName,ProductCode,Img,UnitPrice,Qty,TotalPrice) {
-    let URL="/api/v1/CreateProduct";
+    let URL=BaseURL+"/CreateProduct";
     let PostBody={
         ProductName:ProductName,
         ProductCode:ProductCode,
@@ -24,7 +25,7 @@ export function Create(ProductName,ProductCode,Img,UnitPrice,Qty,TotalPrice) {
 }
 
 export function Read() {
-    let URL="/api/v1/ReadProduct";
+    let URL=BaseURL+"/ReadProduct";
     return axios.get(URL).then((res)=>{
         if(res.status===200){
             return res.data['data'];
@@ -39,7 +40,7 @@ export function Read() {
 }
 
 export function ReadByID(id) {
-    let URL="/api/v1/ReadProductByID/"+id;
+    let URL=BaseURL+"/ReadProductByID/"+id;
     return axios.get(URL).then((res)=>{
         if(res.status===200){
             return res.data['data'];
@@ -54,7 +55,7 @@ export function ReadByID(id) {
 }
 
 export function Delete(id) {
-    let URL="/api/v1/DeleteProduct/"+id;
+    let URL=BaseURL+"/DeleteProduct/"+id;
     return axios.get(URL).then((res)=>{
         if(res.status===200){
             return true;
@@ -69,7 +70,7 @@ export function Delete(id) {
 }
 
 export function Update(id,ProductName,ProductCode,Img,UnitPrice,Qty,TotalPrice) {
-    let URL="/api/v1/UpdateProduct/"+id;
+    let URL=BaseURL+"/UpdateProduct/"+id;
     let PostBody={
         ProductName:ProductName,
         ProductCode:ProductCode,
