@@ -1,8 +1,4 @@
-# Getting Started with Create React App
-
-Live Website here: https://rahib-crud.netlify.app/
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Live Website here: https://rahib-crud.netlify.app/
 
 ## Available Scripts
 
