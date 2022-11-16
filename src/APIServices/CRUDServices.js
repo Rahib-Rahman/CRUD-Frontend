@@ -1,5 +1,5 @@
 import axios from "axios";
-const BaseURL="https://crud-backend.adaptable.app/api/v1"
+const BaseURL="https://crud-backend-jngz.onrender.com/api/v1"
 
 export function Create(ProductName,ProductCode,Img,UnitPrice,Qty,TotalPrice) {
     let URL=BaseURL+"/CreateProduct";
